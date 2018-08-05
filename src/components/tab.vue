@@ -1,8 +1,8 @@
 
 <template>
     <div class="tab">
-        <div v-for="(tab, index) in tabs" :key="tab.id">
-            <tabitem :data="{title: tab, itemWidth: itemWidth, index:index}"></tabitem>
+        <div v-for="(tab, index) in tabs" :key="tab.id" @click="onItemTapEvent(index)">
+            <tabitem :data="tab"></tabitem>
         </div>
     </div>
 </template>
@@ -20,7 +20,6 @@ export default {
 
   data () {
     return {
-      itemWidth: 0,
       selectIndex: 0
     }
   },
@@ -29,18 +28,45 @@ export default {
     tabitem
   },
 
+  methods: {
+    onItemTapEvent: function (index) {
+      this.tabs.forEach(item => {
+        item.itemColor = 'black'
+      })
+      this.selectIndex = index
+      this.tabs[index].itemColor = 'red'
+    }
+  },
+
   created () {
-    console.log('===========width', this.itemWidth)
+    console.log('tab create======', this.tabs)
   },
 
   mounted () {
-    let count = haoguVue.data.titles.length
+  },
+
+  // 添加tab主题属性
+  handleData (arr) {
+    let itemWidth = this.getItemWidth()
+    let array = arr.map(item => {
+      let data = Object.assign({
+        itemWidth: itemWidth,
+        itemColor: 'red'
+      }, item)
+      return data
+    })
+
+    return array
+  },
+
+  // 计算tab宽度
+  getItemWidth () {
+    let count = haoguVue.data().titles.length
     if (count > 5) {
       count = 5
     }
 
-    this.itemWidth = AppVue.data.screenWidth * AppVue.data.pixelRatio / count
-    console.log('===========width', this.itemWidth)
+    return AppVue.data.screenWidth * AppVue.data.pixelRatio / count
   }
 }
 </script>

@@ -26,4 +26,8 @@ export default {
 .container {
   background-color: #cccccc;
 }
+
+.tab-top {
+  height: 100rpx;
+}
 </style>

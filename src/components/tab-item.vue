@@ -1,35 +1,33 @@
 <template>
-    <div class="item" :style="{width: data.itemWidth + 'rpx'}" @click="onClickEvent(data)">
-      <p class="item-title" :style="{color: itemColor}">{{data.title}}</p>
-      <div class="item-line" :style="{background: itemColor}"></div>
+    <div class="item" :style="{width: data.itemWidth + 'rpx'}">
+      <p class="item-title" :style="{color: data.itemColor}">{{data.title}}</p>
+      <div class="item-line" :style="{background: data.itemColor}"></div>
     </div>
 </template>
 
 <script>
-
-import tabVue from './tab.vue'
 
 export default {
   props: {
     data: Object
   },
 
+  watch: {
+    data: function (val) {
+      console.log('======watch data:', val)
+    }
+  },
+
   data () {
     return {
-      itemWidth: 0,
-      itemColor: tabVue.data().selectIndex === this.data.index ? 'red' : 'black'
     }
   },
 
   created () {
-    console.log('=====tab data', tabVue.data())
+    console.log('tab item create======', this.data)
   },
 
   methods: {
-    onClickEvent: function (itemData) {
-      tabVue.selectIndex = itemData.index
-      console.log('=====tab data', tabVue.data().selectIndex, itemData.index)
-    }
   }
 }
 </script>
@@ -41,7 +39,6 @@ export default {
   height: 100%;
   background-color: yellow;
   text-align: center;
-  border: 1px solid red;
 }
 
 .item-title {
