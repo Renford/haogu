@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import App from './App'
 
+import MpvueRouterPatch from 'mpvue-router-patch'
+Vue.use(MpvueRouterPatch)
+
 Vue.config.productionTip = false
 App.mpType = 'app'
 
@@ -11,19 +14,27 @@ export default {
   // 这个字段走 app.json
   config: {
     // 页面前带有 ^ 符号的，会被编译成首页，其他页面可以选填，我们会自动把 webpack entry 里面的入口页面加进去
-    pages: ['^pages/haogus/haogu/main', 'pages/options/optional/main'],
+    pages: [
+      '^pages/tab1/home/main',
+      'pages/tab2/log/main',
+      'pages/general/web/main',
+      'pages/general/search/main'
+    ],
     tabBar: {
-      color: '#aaaaaa',
-      selectedColor: '#ff0000',
+      color: '#a0a0a0',
+      selectedColor: '#eb333b',
       list: [
         {
-          pagePath: 'pages/haogus/haogu/main',
-          text: '好股',
-          color: 'red'
+          pagePath: 'pages/tab1/home/main',
+          text: '主页',
+          iconPath: 'static/button_tab1_nor.png',
+          selectedIconPath: 'static/button_tab1_sel.png'
         },
         {
-          pagePath: 'pages/options/optional/main',
-          text: '好股'
+          pagePath: 'pages/tab2/log/main',
+          text: '日志',
+          iconPath: 'static/button_tab2_nor.png',
+          selectedIconPath: 'static/button_tab2_sel.png'
         }
       ]
     },

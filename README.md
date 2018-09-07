@@ -1,6 +1,6 @@
-# haogu
+# mptemp
 
-> a mini project for good stock
+> a mini template project
 
 ## Build Setup
 

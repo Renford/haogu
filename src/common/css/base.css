@@ -1,0 +1,38 @@
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-top {
+  top: 0rpx;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 80rpx;
+}
+
+.tab-padding {
+  padding-top: 90rpx;
+}
+
+.item-line-padding {
+  height: 1px;
+  margin: 0 20rpx 0 20rpx;
+}
+
+.item-line {
+  width: 100%;
+  height: 1px;
+}
+
+.list-footer {
+  height: 90rpx;
+  align-items: center;
+  justify-content: center;
+}

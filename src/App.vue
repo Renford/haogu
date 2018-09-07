@@ -5,7 +5,8 @@ export default {
   data: {
     screenWidth: 0,
     screenHeight: 0,
-    pixelRatio: 0
+    pixelRatio: 0,
+    userId: ''
   },
 
   created () {
@@ -23,11 +24,12 @@ export default {
 
 <style>
 /* 这部分相当于原生小程序的 app.wxss */
-.container {
-  background-color: #cccccc;
-}
 
-.tab-top {
-  height: 100rpx;
+@import url("./common/css/font.css");
+@import url("./common/css/color.css");
+@import url("./common/css/base.css");
+
+page {
+  background-color: #f8f8f8;
 }
 </style>
