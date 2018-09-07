@@ -1,13 +1,13 @@
+.F0 {
+  font-size: 80rpx;
+}
+
 .F1 {
-  font-size: 60rpx;
+  font-size: 40rpx;
 }
 
 .F2 {
-  font-size: 42rpx;
-}
-
-.F2_5 {
-  font-size: 38rpx;
+  font-size: 36rpx;
 }
 
 .F3 {
@@ -15,29 +15,17 @@
 }
 
 .F4 {
-  font-size: 32rpx;
-}
-
-.F5 {
-  font-size: 30rpx;
-}
-
-.F6 {
   font-size: 28rpx;
 }
 
-.F7 {
+.F5 {
   font-size: 26rpx;
 }
 
-.F8 {
-  font-size: 24rpx;
-}
-
-.F9 {
+.F6 {
   font-size: 22rpx;
 }
 
-.F10 {
+.F7 {
   font-size: 20rpx;
 }
