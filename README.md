@@ -1,6 +1,13 @@
-# mptemp
+## mptemp
 
 > a mini template project
+
++ 网络：[fly](https://github.com/wendux/fly)
++ 路由： [mpvue-router-patch](https://github.com/F-loat/mpvue-router-patch)
++ 日历： [mpvue-calendar](https://github.com/Hzy0913/mpvue-calendar)
++ 富文本：[mpvue-wxParse](https://github.com/F-loat/mpvue-wxParse)
++ 选择器：[mpvue-picker](https://github.com/MPComponent/mpvue-picker)
++ 官方组件： [mpvue-weui](https://github.com/KuangPF/mpvue-weui)
 
 ## Build Setup
 
