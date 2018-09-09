@@ -7,7 +7,7 @@
 + 日历： [mpvue-calendar](https://github.com/Hzy0913/mpvue-calendar)
 + 富文本：[mpvue-wxParse](https://github.com/F-loat/mpvue-wxParse)
 + 选择器：[mpvue-picker](https://github.com/MPComponent/mpvue-picker)
-+ 官方组件： [mpvue-weui](https://github.com/KuangPF/mpvue-weui)
++ UI组件： [mpvue-weui](https://github.com/KuangPF/mpvue-weui)
 
 ## Build Setup
 
